@@ -26,6 +26,7 @@ In grayscale images, each pixel represents light intensity and holds a single va
 
 ## 3. Example 
 ![Grayscale Matrix](images/8_withvalues.png "Grayscale Pixel Values")
+
 The image appears to be a representation of a grayscale image as seen by a computer, specifically in the form of a matrix of pixel values. Each number in the matrix corresponds to a pixel's intensity in the image, with values typically ranging from 0 to 255 in an 8-bit grayscale image.
 
 In a grayscale image, the value 0 represents black, the darkest possible shade, and 255 represents white, the lightest shade. Shades of gray are represented by values in between, with lower numbers being darker and higher numbers being lighter.
