@@ -11,9 +11,15 @@ RGB (Red, Green, Blue) color model is essential in digital imaging and is widely
 
 To a computer, an RGB image is seen as a three-dimensional array (or tensor in the context of deep learning) where two dimensions represent the spatial dimensions (width and height), and the third dimension represents the color channels. For instance, a 100x100 pixel RGB image would be represented as a 100x100x3 array:
 
-    [100, 100, 0]: This slice represents all the red channel values of the image.
-    [100, 100, 1]: This slice represents all the green channel values.
-    [100, 100, 2]: This slice contains all the blue channel values.
+[100, 100, 0]: This slice represents all the red channel values of the image.
+[100, 100, 1]: This slice represents all the green channel values.
+[100, 100, 2]: This slice contains all the blue channel values.
+
+## Example
+
+![RGB Matrix](images/rgb_info.png "RFGB Pixel Values")
+
+Let’s have an example. In the illustration above, imagine the picture on the left only has a size of 5x5 pixels. Thus, the image consist of 25 pixels in total. In reality, we would barley see a picture this small, but it is a good size for illustration purposes. As you can see the image has a grid. This grid can be used to access each pixel. On the right, we see how the python library OpenCV (cv2) stores this particular picture, namley in matrices with a shape of [5,5,3]. The last index (3) indicates the three different colours Red, Green, Blue. If we now access one particular pixel, for instance at location [4,4] we receive the pixel values [24,23,34]. The first value depicts the intensity for the colour red, the second one represents the intensity for the colour green and the last one for blue. In combination, those three colours yield a new colour which is depicted at this particular pixel location. Those values range from 0–255.
 
 ## Advantages of RGB in Deep Learning
 
