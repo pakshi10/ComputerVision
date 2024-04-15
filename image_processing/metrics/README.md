@@ -129,3 +129,36 @@ Importance of mAP in Palm Field Autonomy
 Conclusion
 
 In summary, mAP is an invaluable metric for any autonomy vision system in palm fields, providing insights into the precision and recall of the system across different object classes and detection thresholds. By using mAP, developers and operators can better understand the capabilities and limitations of their models, ensuring that the autonomous systems operate safely and effectively in complex agricultural environments.
+
+The notation "mAP@50" or "mAP@90" refers to the Mean Average Precision (mAP) calculated at specific Intersection over Union (IoU) thresholds—50% and 90%, respectively. These thresholds quantify the required overlap between the predicted bounding boxes and the ground truth bounding boxes to consider a prediction as a correct detection (True Positive). Let's explore what these numbers mean and how they apply in the context of a palm field autonomy model.
+Understanding mAP@50, mAP@90
+
+Intersection over Union (IoU) Threshold
+
+    IoU measures the overlap between two bounding boxes (one from the prediction and one as the ground truth). It is defined as the area of overlap divided by the area of the union of the two boxes.
+    IoU Threshold: When we say mAP@50 or mAP@90, the '50' and '90' denote the IoU threshold percentages. For a prediction to be considered correct at:
+        IoU ≥ 0.50: There must be at least 50% overlap between the predicted and true bounding boxes.
+        IoU ≥ 0.90: There must be at least 90% overlap.
+
+Implications for the Palm Field Model
+
+Example Use Case: An autonomy model in a palm field detects various objects crucial for operational efficiency and safety—trees, humans, obstacles, water channels, lanes, and ditches.
+
+    mAP@50 (IoU ≥ 0.50)
+        Relevance: This is a less strict metric, more forgiving in terms of how precisely the model needs to localize objects. It is useful for general detection tasks where exact boundary precision is less critical.
+        Example: If the model is used for preliminary scanning of areas to identify regions of interest (e.g., detecting general areas where trees are concentrated), mAP@50 might be sufficient to assess model performance. This allows for minor inaccuracies in bounding box placement, focusing more on reliable object detection than on exact localization.
+
+    mAP@90 (IoU ≥ 0.90)
+        Relevance: This is a stringent metric, requiring high precision in the localization of detected objects. It is critical for tasks where the exact boundaries of an object are necessary for subsequent actions.
+        Example: For precision tasks such as automated pesticide spraying or detailed mapping of irrigation channels, where the exact contours of the objects are crucial to guide machinery accurately, mAP@90 is a better performance indicator. High performance at this level ensures that the model is very accurate in placing bounding boxes, minimizing the risk of misapplication of treatments or misidentification of terrain features.
+
+Choosing the Right Metric
+
+In choosing between mAP@50 and mAP@90 or determining the necessary IoU threshold, consider the operational requirements:
+
+    Safety and Critical Operations: Use higher IoU thresholds (mAP@90) where precise localization is tied to safety or critical operational decisions.
+    General Surveillance and Monitoring: Lower IoU thresholds (mAP@50) may be adequate for general detection tasks, where the emphasis is on detecting the presence rather than the precise location of objects.
+
+Conclusion
+
+In the context of an autonomous system operating in a palm field, mAP@50 and mAP@90 provide valuable insights into the model's localization accuracy at different levels of strictness. Choosing the right IoU threshold for mAP calculation depends on the specific needs of the application—whether it prioritizes broad reliability across conditions (mAP@50) or precise accuracy in critical situations (mAP@90). This decision impacts how the model's performance is evaluated and what improvements are necessary to meet operational goals.
