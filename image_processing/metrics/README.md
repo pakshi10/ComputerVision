@@ -161,4 +161,5 @@ In choosing between mAP@50 and mAP@90 or determining the necessary IoU threshold
 
 Conclusion
 
+
 In the context of an autonomous system operating in a palm field, mAP@50 and mAP@90 provide valuable insights into the model's localization accuracy at different levels of strictness. Choosing the right IoU threshold for mAP calculation depends on the specific needs of the application—whether it prioritizes broad reliability across conditions (mAP@50) or precise accuracy in critical situations (mAP@90). This decision impacts how the model's performance is evaluated and what improvements are necessary to meet operational goals.
