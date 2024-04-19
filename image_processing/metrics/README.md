@@ -210,8 +210,8 @@ Application in the Palm Field
 
 Using the IoU threshold helps in:
 
-    Ensuring Accurate Localization: High IoU values indicate that the model is not only detecting objects but is accurately pinpointing their locations, which is crucial for tasks like precise pesticide spraying or automated navigation.
-    Improving Model Training: Analyzing IoU values across many detections can provide insights into how well the model is performing and where it might be making systematic errors, guiding further training and refinement.
+Ensuring Accurate Localization: High IoU values indicate that the model is not only detecting objects but is accurately pinpointing their locations, which is crucial for tasks like precise pesticide spraying or automated navigation.
+Improving Model Training: Analyzing IoU values across many detections can provide insights into how well the model is performing and where it might be making systematic errors, guiding further training and refinement.
 
 Conclusion
 
